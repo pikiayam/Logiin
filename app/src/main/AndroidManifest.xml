@@ -14,9 +14,12 @@
         android:theme="@style/Theme.Logiin"
         tools:targetApi="31">
         <activity
+            android:name=".IntentMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".CuacaMainActivity"
             android:exported="false"
-            android:label="Cuaca Pontianak"/>
+            android:label="Cuaca Pontianak" />
         <activity
             android:name=".ForexMainActivity"
             android:exported="false" />
@@ -27,9 +30,9 @@
             android:name=".TambahMahasiswaActivity"
             android:exported="false" />
         <activity
-            android:label="Login"
             android:name=".MenuActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Login" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
