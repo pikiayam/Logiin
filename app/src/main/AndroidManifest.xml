@@ -27,6 +27,7 @@
             android:name=".TambahMahasiswaActivity"
             android:exported="false" />
         <activity
+            android:label="Login"
             android:name=".MenuActivity"
             android:exported="false" />
         <activity

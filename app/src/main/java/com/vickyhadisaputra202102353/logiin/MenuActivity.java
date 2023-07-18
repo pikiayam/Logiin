@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
 
+    public static final String CALL_ID = "call_id";
     private Button _tampilMahasiswaButton, _tampilForexButton, _tampilCuacaButton;
     private Intent _tampilMahasiswaIntent, _tampilForexIntent, _tampilCuacaIntent;
 
@@ -17,6 +18,9 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        String name = getIntent().getStringExtra(CALL_ID);
+        setTitle("Hallo  "+ name);
 
         initTampilMahasiswaButton();
         initTampilForexButton();
