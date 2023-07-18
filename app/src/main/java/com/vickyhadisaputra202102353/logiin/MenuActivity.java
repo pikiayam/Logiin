@@ -10,8 +10,8 @@ import android.widget.Button;
 public class MenuActivity extends AppCompatActivity {
 
     public static final String CALL_ID = "call_id";
-    private Button _tampilMahasiswaButton, _tampilForexButton, _tampilCuacaButton, _tampilIntentImButton;
-    private Intent _tampilMahasiswaIntent, _tampilForexIntent, _tampilCuacaIntent, _tampilIntentImIntent;
+    private Button _tampilMahasiswaButton, _tampilForexButton, _tampilCuacaButton, _tampilIntentImButton, _tampilTabButton;
+    private Intent _tampilMahasiswaIntent, _tampilForexIntent, _tampilCuacaIntent, _tampilIntentImIntent, _tampilTabIntent;
 
 
     @Override
@@ -26,6 +26,7 @@ public class MenuActivity extends AppCompatActivity {
         initTampilForexButton();
         initTampilCuacaButton();
         initTampilIntentImButton();
+        initTampilTabButton();
     }
 
     private void initTampilMahasiswaButton() {
@@ -72,6 +73,17 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 _tampilIntentImIntent = new Intent(getApplicationContext(), IntentMainActivity.class);
                 startActivity(_tampilIntentImIntent);
+            }
+        });
+    }
+    private void initTampilTabButton() {
+        _tampilTabButton = (Button) findViewById(R.id.tampilTabButton);
+
+        _tampilTabButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _tampilTabIntent = new Intent(getApplicationContext(), TabMainActivity.class);
+                startActivity(_tampilTabIntent);
             }
         });
     }
